@@ -1,7 +1,7 @@
 const Header = () => {
   return (
-    <div class="jumbotron">
-      <h1 class="display-4">Get 20% discount on new Products</h1>
+    <div class="jumbotron text-center">
+      <h1 class="display-4">Welcome to EShop</h1>
       <p class="lead">
         One stop shop for all your needs. We have a wide range of products for you to choose
       </p>
