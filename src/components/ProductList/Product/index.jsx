@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Product = (props) => {
   const { id, title, price, images, category } = props.data;
   return (
@@ -8,9 +9,9 @@ const Product = (props) => {
           <h5 className="card-title text-truncate">{title}</h5>
           <p className="card-text">{category.name}</p>
           <p className="card-text">${price}</p>
-          <a href="#" className="btn btn-primary">
+          <Link to={`/products/${id}`} className="btn btn-primary">
             Add to Cart
-          </a>
+          </Link>
         </div>
       </div>
     </div>
