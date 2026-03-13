@@ -1,16 +1,22 @@
 import { Link } from "react-router-dom";
+
 const Product = (props) => {
   const { id, title, price, images, category } = props.data;
   return (
-    <div className="col-sm-3">
-      <div className="card">
-        <img className="card-img-top" src={images[0]} alt={title} />
-        <div className="card-body">
-          <h5 className="card-title text-truncate">{title}</h5>
-          <p className="card-text">{category.name}</p>
-          <p className="card-text">${price}</p>
-          <Link to={`/products/${id}`} className="btn btn-primary">
-            Add to Cart
+    <div class="col-sm-3">
+      <div class="card">
+        <img src={images} class="card-img-top" alt={title} />
+        <div class="card-body">
+          <h5 class="card-title">{title}</h5>
+          <p class="card-text">
+            <span class="badge badge-secondary">{category?.name}</span>
+          </p>
+          <h2>
+            <span>&#8377;</span>
+            {price}
+          </h2>
+          <Link to={`/products/${id}`} class="btn btn-primary btn-block">
+            Show Details
           </Link>
         </div>
       </div>

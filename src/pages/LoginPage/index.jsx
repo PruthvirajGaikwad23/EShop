@@ -17,7 +17,7 @@ const LoginPage = () => {
   };
   const onSubmit = (values) => {
     axios
-      .post("https://api.escuelajs.co/api/v1/auth/login", values)
+      .post("http://localhost:5000/api/auth/login", values)
       .then(
         (response) => {
             
@@ -26,7 +26,7 @@ const LoginPage = () => {
             className: "alert alert-success",
           });
 
-          localStorage.setItem("token", response.data.access_token);
+          localStorage.setItem("token", response.data.data.token);
 
           navigate("/");
         },
